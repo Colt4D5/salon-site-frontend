@@ -1,13 +1,5 @@
-<svelte:head>
-	<!-- Swiper's CSS -->
-	<link
-		rel="stylesheet"
-		href="https://unpkg.com/swiper/swiper-bundle.min.css"
-	/>
-</svelte:head>
-
 <script>
-  import Slide from "../lib/Slide.svelte";
+  import Slide from "../lib/components/Slide.svelte";
 
   // Import Swiper Svelte components
   import { Navigation, Pagination, Autoplay, A11y } from 'swiper';
@@ -23,13 +15,11 @@
   const slides = data.sliders.data;
 </script>
 
-<h1>Home <span>Page</span></h1>
 <Swiper
     id="heroimage"
     modules={[Navigation, Pagination, Autoplay, A11y]}
-    spaceBetween={50}
     navigation
-    autoplay
+    autoplay={{ delay: 6000 }}
     pagination={{ clickable: true }}
   >
   { #each slides as slide }
