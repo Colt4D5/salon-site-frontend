@@ -22,7 +22,7 @@
   const slides = data.sliders.data;
 </script>
 
-<h1>Home Page</h1>
+<h1>Home <span>Page</span></h1>
 <Swiper
     id="heroimage"
     modules={[Navigation, Pagination, Scrollbar, A11y]}
