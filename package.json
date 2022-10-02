@@ -12,7 +12,9 @@
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"graphql": "^15.8.0",
+		"sass": "^1.55.0",
 		"svelte": "^3.44.0",
+		"svelte-preprocess": "^4.10.7",
 		"vite": "^3.1.0"
 	},
 	"type": "module",
