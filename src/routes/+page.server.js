@@ -7,6 +7,7 @@ export async function load() {
         data {
           attributes {
             title
+            content
             img_full {
               data {
                 attributes {

@@ -10,13 +10,14 @@
   import Slide from "../lib/Slide.svelte";
 
   // Import Swiper Svelte components
-  import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+  import { Navigation, Pagination, Autoplay, A11y } from 'swiper';
   import { Swiper } from 'swiper/svelte';
 
   // Import Swiper styles
   import 'swiper/css';
   import 'swiper/css/navigation';
   import 'swiper/css/pagination';
+  import 'swiper/css/autoplay';
 
   export let data;
   const slides = data.sliders.data;
@@ -25,9 +26,10 @@
 <h1>Home <span>Page</span></h1>
 <Swiper
     id="heroimage"
-    modules={[Navigation, Pagination, Scrollbar, A11y]}
+    modules={[Navigation, Pagination, Autoplay, A11y]}
     spaceBetween={50}
     navigation
+    autoplay
     pagination={{ clickable: true }}
   >
   { #each slides as slide }
