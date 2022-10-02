@@ -1,0 +1,137 @@
+@use 'mixins' as *;
+
+
+:root {
+  --primary-lgt: hsl(213, 18%, 55%);
+  --primary: hsl(213, 18%, 32%);
+  --primary-drk: hsl(213, 18%, 20%);
+
+  --secondary-lgt: hsl(358, 59%, 70%);
+  --secondary: hsl(358, 59%, 56%);
+  --secondary-drk: hsl(358, 59%, 40%);
+
+  --tertiary: hsl(0, 0%, 0%); //Not currently in use
+
+  --light: hsl(0, 0%, 100%);
+  --dark: hsl(345, 6%, 13%);
+}
+
+$primary-lgt: hsl(213, 18%, 55%);
+$primary: hsl(213, 18%, 32%);
+$primary-drk: hsl(213, 18%, 20%);
+
+$secondary-lgt: hsl(358, 59%, 70%);
+$secondary: hsl(358, 59%, 56%);
+$secondary-drk: hsl(358, 59%, 40%);
+
+$tertiary: hsl(0, 0%, 0%); // Not currently in use
+
+$light: hsl(0, 0%, 100%);
+$dark: hsl(345, 6%, 13%);
+
+
+$transition: all 0.3s ease;
+
+$row-width: 1200px;
+
+// Import Fonts
+$font:  proxima-nova, sans-serif;
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  line-height: 1.5;
+  font-family:  $font;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+p, a, li, div, span {
+  font-family: $font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  text-transform: uppercase;
+  font-family:  $font;
+  font-weight: 300;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  font-weight: 500;
+  color: var(--dark);
+  transition: $transition;
+  font-family: $font;
+  &:hover {
+    color: var(--secondary);
+  }
+}
+
+ul:not(main#content section ul) {
+  list-style: none;
+}
+
+
+// Outline ONLY when using tab key
+body.accessibility-enabled a:focus {
+  outline: none;
+  @include breakpoint(large) {
+    outline: 3px solid var(--light);
+  }
+}
+
+// skip content button
+.skip-link.screen-reader-text {
+	position: absolute;
+	left: 0.25rem;
+	top: 0.25rem;
+	padding: 1.25rem 2rem;
+	background-color: var(--light);
+	color: var(--dark);
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	cursor: pointer;
+}
+
+.skip-link.screen-reader-text:focus {
+	opacity: 1;
+}
+
+#footer .footer #footer-top #inner {
+	background: url(/wp-content/uploads/2022/03/footer_bg_texture-1024x240-1.webp), #00344d;
+	background-size: cover;
+}
+
+.content-wrapper {
+  min-height: 400px;
+}
+
+body.home main,
+body.home-holiday main {
+  // background-image: url(/wp-content/uploads/2022/07/home-body-bg-mobile-1.webp);
+  background: url(/wp-content/uploads/2022/07/home-body-bg-mobile-top.webp), url(/wp-content/uploads/2022/07/home-body-bg-mobile-bottom.webp), linear-gradient(to bottom, #546473, #546473);
+  background-position: top, left 0 bottom 8rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include breakpoint(large) {
+    background: url(/wp-content/uploads/2022/07/home-bg-texture-left.webp), url(/wp-content/uploads/2022/07/home-bg-texture-right.webp), linear-gradient(to bottom, #546473, #546473);
+    background-position: left top, right top;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+  }
+}

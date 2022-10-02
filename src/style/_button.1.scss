@@ -1,0 +1,35 @@
+@use 'mixins' as *;
+@use 'globals' as *;
+
+// simple block btn
+
+a.button, input#searchsubmit, input[type=submit] {
+  background-color: var(--secondary);
+  padding: 0.75em 1.5em;
+  color: var(--light);
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border: none;
+  font-weight: 300;
+  letter-spacing: 2px;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--secondary-lgt);
+  }
+}
+
+a.button.alt {
+  background-color: transparent;
+  border: 2px solid var(--secondary);
+  &:hover {
+    background-color: var(--secondary);
+  }
+}
+
+header #headerimage .swiper-slide .slide_text a.button {
+  text-decoration: none;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 100;
+}
