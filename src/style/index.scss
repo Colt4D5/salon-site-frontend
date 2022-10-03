@@ -1,9 +1,30 @@
 @forward 'mixins';
 @forward 'globals';
 
+@forward 'buttons/button.1';
+@forward 'foundation';
+
 /****************************
 HEADERS
 ****************************/
-@forward 'header.1';
+@forward 'headers/header.1';
 
-@forward 'button.1';
+/****************************
+INTROS
+****************************/
+@forward 'intros/intro.1';
+
+/****************************
+PROMOS
+****************************/
+@forward 'promos/promo.3';
+
+/****************************
+SUBFOOTERS
+****************************/
+@forward 'subfooters/subfooter.1';
+
+/****************************
+FOOTERS
+****************************/
+@forward 'footers/footer.3';

@@ -1,0 +1,122 @@
+@use '../mixins' as *;
+@use '../globals' as *;
+
+footer {
+  #footer-top {
+    background-color: var(--primary);
+    background-image: url(http://aurea.imaginalmarketing.net/wp-content/uploads/2022/07/footer-bg-mobile.webp);
+    background-size: cover;
+    text-transform: uppercase;
+    @include breakpoint(large) {
+      background-image: url(http://aurea.imaginalmarketing.net/wp-content/uploads/2022/07/footer-bg.webp);
+    }
+    #inner {
+      padding: 5rem 0;
+      color: var(--light);
+      font-size: 1.15rem;
+      line-height: 1.6;
+      text-align: center;
+      @include breakpoint(large) {
+        text-align: left;
+      }
+      & > :is(.wrap-right, .wrap-left) > div.column {
+        margin-bottom: 3rem;
+        padding: 0 3rem;
+        @include breakpoint(large) {
+          margin-bottom: 0;
+          padding: 0;
+        }
+      }
+      #footer-logo {
+        width: 225px;
+        margin: 0 auto 0.5rem;
+      }
+      h4 {
+        color: var(--light);
+        text-align: center;
+        margin: 0;
+        font-size: 1.75rem;
+        font-weight: 300;
+        @include breakpoint(medium) {
+          text-align: left;
+        }
+      }
+      table.hours {
+        tr {
+          td {
+            font-size: clamp(0.95rem, 2vw, 1.15rem);
+            text-align: center;
+            @include breakpoint(large) {
+              text-align: left;
+            }
+            &:first-child {
+              max-width: 25%;
+            }
+          }
+        }
+      }
+      .social-icons-wrap {
+        margin-top: 1rem;
+        i.fa {
+          margin: 0 0.5rem;
+        }
+      }
+      ul#menu-footer {
+        padding: 0;
+        margin: 0;
+      }
+      #foot1 {
+        margin-bottom: 1rem;
+        font-weight: 300;
+        p {
+          margin: 0;
+        }
+      }
+      #foot2 {
+        font-size: clamp(0.95rem, 2vw, 1.15rem);
+        padding-left: 2rem;
+        @include breakpoint(large) {
+          padding-left: 3.5rem;
+        }
+      }
+      #foot3 {
+        margin-bottom: 4rem;
+        ul {
+          li {
+            a {
+              font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+            }
+          }
+        }
+      }
+      #foot4 {
+        .menu-footer-container {
+          display:none;
+          @include breakpoint(medium) {
+            display: block;
+          }
+        }
+        li {
+          a {
+            font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+          }
+        }
+        img {
+          filter: invert(1);
+        }
+      }
+      a {
+        color: var(--light);
+        font-weight: 300;
+        text-decoration: none;
+        &:hover {
+          color: var(--secondary);
+        }
+      }
+    }
+  }
+  #footer-bottom {
+    text-align: center;
+    padding: 0.5rem;
+  }
+}

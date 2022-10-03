@@ -45,6 +45,7 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  // background-color: #555;
 }
 
 p, a, li, div, span {
@@ -113,7 +114,7 @@ body.accessibility-enabled a:focus {
 }
 
 #footer .footer #footer-top #inner {
-	background: url(/wp-content/uploads/2022/03/footer_bg_texture-1024x240-1.webp), #00344d;
+	background: url(http://aurea.imaginalmarketing.net/wp-content/uploads/2022/03/footer_bg_texture-1024x240-1.webp), #00344d;
 	background-size: cover;
 }
 
@@ -123,13 +124,13 @@ body.accessibility-enabled a:focus {
 
 body.home main,
 body.home-holiday main {
-  // background-image: url(/wp-content/uploads/2022/07/home-body-bg-mobile-1.webp);
-  background: url(/wp-content/uploads/2022/07/home-body-bg-mobile-top.webp), url(/wp-content/uploads/2022/07/home-body-bg-mobile-bottom.webp), linear-gradient(to bottom, #546473, #546473);
+  // background-image: url(http://aurea.imaginalmarketing.net/wp-content/uploads/2022/07/home-body-bg-mobile-1.webp);
+  background: url(http://aurea.imaginalmarketing.net/wp-content/uploads/2022/07/home-body-bg-mobile-top.webp), url(http://aurea.imaginalmarketing.net/wp-content/uploads/2022/07/home-body-bg-mobile-bottom.webp), linear-gradient(to bottom, #546473, #546473);
   background-position: top, left 0 bottom 8rem;
   background-size: contain;
   background-repeat: no-repeat;
   @include breakpoint(large) {
-    background: url(/wp-content/uploads/2022/07/home-bg-texture-left.webp), url(/wp-content/uploads/2022/07/home-bg-texture-right.webp), linear-gradient(to bottom, #546473, #546473);
+    background: url(http://aurea.imaginalmarketing.net/wp-content/uploads/2022/07/home-bg-texture-left.webp), url(http://aurea.imaginalmarketing.net/wp-content/uploads/2022/07/home-bg-texture-right.webp), linear-gradient(to bottom, #546473, #546473);
     background-position: left top, right top;
     background-size: 50% 100%;
     background-repeat: no-repeat;

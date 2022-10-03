@@ -1,5 +1,5 @@
-@use 'mixins' as *;
-@use 'globals' as *;
+@use '../mixins' as *;
+@use '../globals' as *;
 
 header {
 
@@ -69,14 +69,14 @@ header {
               }
               ul.is_subnav {
                 position: absolute;
-                transition: all 0.2s ease;
+                transition: all 0.4s ease;
                 opacity: 0;
                 padding: 0;
                 top: 100%;
                 left: 0;
                 align-items: flex-start;
-                pointer-events: auto;
-                transition-delay: 0.3s;
+                pointer-events: none;
+                // transition-delay: 0.3s;
                 flex-direction: column;
                 background-color: var(--secondary);
                 z-index: 3;
@@ -120,6 +120,12 @@ header {
                       }
                     }
                   }
+                }
+              }
+              &:hover {
+                .is_subnav {
+                  opacity: 1;
+                  pointer-events: auto;
                 }
               }
             }

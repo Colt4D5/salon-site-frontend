@@ -36,6 +36,16 @@ export const nav = [
     ]
   },
   {
+    title: 'Specials',
+    link: '/specials/',
+    children: [
+      {
+        title: 'New Guest Offer',
+        link: '/specials/',
+      }
+    ]
+  },
+  {
     title: 'Aveda',
     link: '/aveda/why-aveda/',
     children: [
@@ -56,5 +66,10 @@ export const nav = [
         link: '/aveda/new-at-aveda/',
       }
     ]
-  }
+  },
+  {
+    title: 'Location',
+    link: '/locations/location',
+    children: []
+  },
 ]

@@ -12,7 +12,15 @@
         <nav id="nav-main">
           <ul>
             {#each nav as item}
-              <li><a href={item.link}>{item.title}</a></li>
+              <li><a href={item.link} data-link>{item.title}</a>
+                {#if item.children.length !== 0}
+                  <ul class="is_subnav">
+                    {#each item.children as child}
+                      <li><a href={child.link}>{child.title}</a></li>
+                    {/each}
+                  </ul>
+                {/if}
+              </li>
             {/each}
           </ul>
         </nav><!-- #nav -->

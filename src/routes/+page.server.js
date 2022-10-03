@@ -1,7 +1,7 @@
 import { request, gql } from 'graphql-request'
 
 export async function load() {
-  const query = gql`
+  const sliderQuery = gql`
     query GetSliders {
       sliders {
         data {
@@ -27,7 +27,31 @@ export async function load() {
       }
     }
   `
+  const promoQuery = gql`
+    query GetSliders {
+      promos {
+        data {
+          attributes {
+            image {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+            link
+            content
+            cta
+          }
+        }
+      }
+    }  
+  `
 
-  const slides = await request('http://127.0.0.1:1337/graphql', query)
-  return slides
+  const slides = await request('http://127.0.0.1:1337/graphql', sliderQuery)
+  const promos = await request('http://127.0.0.1:1337/graphql', promoQuery)
+  return {
+    slides,
+    promos
+  }
 }
